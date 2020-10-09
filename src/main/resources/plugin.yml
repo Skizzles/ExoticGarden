@@ -6,4 +6,4 @@ api-version: '1.13'
 
 main: io.github.thebusybiscuit.exoticgarden.ExoticGarden
 
-depend: [Slimefun]
+depend: [Slimefun, FluffyMachines]
