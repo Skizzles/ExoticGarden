@@ -78,9 +78,7 @@ public class PlantsListener implements Listener {
     public void onWateringCanWater(PlayerInteractEvent e) {
         Block b = e.getClickedBlock();
         ItemStack item = e.getPlayer().getInventory().getItemInMainHand();
-        final ItemMeta itemMeta = item.getItemMeta();
-        final Optional<String> id = SlimefunPlugin.getItemDataService().getItemData(itemMeta);
-        if (b != null && id.isPresent() && id.get().equals(FluffyItems.WATERING_CAN.getItemId()) && e.getHand() == EquipmentSlot.HAND) {
+        if (b != null && SlimefunItem.getByItem(item) == FluffyItems.WATERING_CAN.getItem() && e.getHand() == EquipmentSlot.HAND) {
             waterStructure(b.getLocation(), e, item);
         }
     }
