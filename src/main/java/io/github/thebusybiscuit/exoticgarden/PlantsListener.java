@@ -89,8 +89,9 @@ public class PlantsListener implements Listener {
         if (item != null) {
             final double random = ThreadLocalRandom.current().nextDouble();
             for (Tree tree : ExoticGarden.getTrees()) {
-                if (item.getID().equalsIgnoreCase(tree.getSapling())) {
-                    if (!WateringCan.updateUses(e.getPlayer(), wateringCan, 1)) {
+                if (item.getId().equalsIgnoreCase(tree.getSapling())) {
+                    if (!WateringCan.updateUses(e.getPlayer(), wateringCan, 1)
+                        || !SlimefunPlugin.getProtectionManager().hasPermission(e.getPlayer(), l.getBlock(), ProtectableAction.BREAK_BLOCK)) {
                         return;
                     }
                     l.getWorld().spawnParticle(Particle.VILLAGER_HAPPY, l.add(0.5D, 0.5D, 0.5D), 15, 0.2F, 0.2F, 0.2F);
