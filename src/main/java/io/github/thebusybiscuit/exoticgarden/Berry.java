@@ -1,12 +1,13 @@
 package io.github.thebusybiscuit.exoticgarden;
 
-import java.util.Arrays;
-import java.util.List;
-
+import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
-import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Arrays;
+import java.util.List;
 
 public class Berry {
 
@@ -15,11 +16,13 @@ public class Berry {
     private final String texture;
     private final PlantType type;
 
+    @ParametersAreNonnullByDefault
     public Berry(String id, PlantType type, String texture) {
         this(null, id, type, texture);
     }
 
-    public Berry(ItemStack item, String id, PlantType type, String texture) {
+    @ParametersAreNonnullByDefault
+    public Berry(@Nullable ItemStack item, String id, PlantType type, String texture) {
         this.item = item;
         this.id = id;
         this.texture = texture;
