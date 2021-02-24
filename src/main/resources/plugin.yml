@@ -1,10 +1,9 @@
 name: ExoticGarden
 version: ${project.version}
-author: TheBusyBiscuit
+author: The Slimefun 4 Community
 description: A Slimefun Addon that adds new Plants and dishes to the game
-website: https://github.com/TheBusyBiscuit/ExoticGarden
-
 api-version: '1.13'
+
 main: io.github.thebusybiscuit.exoticgarden.ExoticGarden
 
 depend:
